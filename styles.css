@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
+
+:root {
+    --mainColor: rgb(255, 113, 1);
+    --extraColor: rgb(0, 142, 254);
+    --titleSize: 36px
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    /* hyphens: auto; */
+}
+
+.header {
+    background-color: var(--mainColor);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 6px;
+    position: relative;
+    border-bottom: 1px dashed #fff;
+}
+
+.logo {
+    width: 30%;
+    margin: 15px 0;
+}
+
+.search {
+    margin: 3px;
+    height: 35px;
+    display: flex;
+    border: dashed 1px #fff;
+}
+
+.search__input {
+    flex: 1;
+    border: none;
+    box-sizing: border-box;
+    padding-left: 10px;
+}
+
+.search__button, .navigation__button {
+    min-width: 45px;
+    background-color: var(--mainColor);
+    border: none;
+}
+
+.navigation__button {
+    font-size: 20px;
+    color: #fff
+}
+
+.navigation {
+    position: absolute;
+    top: 15px;
+    right: 10px
+}
+
+.navigation__list {
+    display: none;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+}
+
+.section--greyBg {
+    background-color: rgb(230, 230, 230);
+}
+
+.section:last-of-type {
+    margin-top: 20px
+}
+
+.section__title {
+    color: var(--extraColor);
+    margin: 0;
+    padding: 20px 18px;
+    font-size: var(--titleSize);
+}
+
+.section__title--white {
+    color: #fff;
+    padding: 20px 0;
+}
+
+.section__quote {
+    line-height: 23px;
+}
+
+.section__aboutBox{
+    background-color: var(--extraColor);
+    padding: 35px 18px;
+    color: #fff;
+    letter-spacing: 0.2px;
+}
+
+.section__aboutImg {
+    width: 100%;
+}
+
+q::before, q::after {
+    font-size: 30px;
+    quotes: '"' '"';
+}
+
+.projectBox {
+    margin: 0 18px 50px 18px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 5px 3px rgb(198,198,198);
+    height: 340px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.projectBox__button {
+    background-color: var(--extraColor);
+    width: 143px;
+    height: 32px;
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    top: 324px;
+    right: 0;
+    left: 0;
+}
+
+.projectBox__link {
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+}
+
+.projectBox__symbol {
+    font-size: 10px;
+}
+
+.projectBox__title {
+    color: var(--extraColor);
+    text-transform: capitalize;
+    font-size: 20px;
+    text-align: center;
+    margin: 12px auto;
+    text-transform: uppercase;
+}
+
+.projectBox__text {
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+}
+
+.projectBox__img {
+    display: block;
+    margin: 0 auto;
+}
+
+.projectBox:first-of-type .projectBox__img {
+    margin-top: 12px
+}
+
+.contactBox {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px 40px 20px;
+}
+
+.contactBox__label {
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.contactBox__input {
+    border: 1px solid var(--mainColor);
+    width: 100%;
+    height: 27px;
+    margin-bottom: 10px;
+    margin-top: 2px;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.contactBox__input::placeholder {
+    color: #000;
+}
+
+.contactBox__formRow:last-child .contactBox__input {
+    height: 212px;
+    box-sizing: border-box;
+    padding: 10px
+}
+
+.contactBox__submit {
+    border: none;
+    background-color: var(--extraColor);
+    height: 32px;
+    color: #fff;
+    font-size: 14px;
+}
+
+.footer {
+    background-color: var(--mainColor);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.footer__text {
+    color: #fff;
+}
+
+@media (min-width: 1400px) {
+
+    .header {
+        padding: 22px calc((100vw - 1200px)/2) 59px calc((100vw - 1250px)/2);
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .logo {
+        margin: 0;
+        height: 145px;
+        width: auto;
+    }
+
+    .search {
+        margin: 0;
+        width: 205px;
+        justify-items: flex-end;
+    }
+
+    .search__input {
+        width: 160px;
+    }
+
+    .navigation {
+        top: auto;
+        bottom: 0;
+        left: calc((100vw - 1250px)/2);
+    }
+
+    .navigation__list {
+        display: flex;
+        list-style-type: none;
+        margin: 0;
+        padding: 0
+    }
+
+    .navigation__item {
+        padding: 10px 13px 10px 13px;
+        background-color: #fff;
+        border-bottom: 1px #fff dashed;
+        margin-right: 5px;
+        border-radius: 5px 5px 0 0;
+    }
+
+    .navigation__link {
+        text-decoration: none;
+        color: var(--mainColor);
+        text-transform: uppercase;
+        /* font-size: 12px; */
+    }
+
+    .navigation__button {
+        display: none;
+    }
+
+    .section {
+        padding: 40px calc((100vw - 1200px)/2) 40px calc((100vw - 1250px)/2);
+    }
+
+    .section:first-of-type {
+        flex-direction: row;
+    }
+
+    .section:last-of-type {
+        margin: 0
+    }
+
+    .section__aboutBox {
+        padding: 52px 20px 45px 20px;
+    }
+
+    .section__title {
+        margin: 0 0 25px 0;
+        padding: 0;
+    }
+
+    .section__projects {
+        display: flex;
+    }
+
+    .section--greyBg {
+        padding-top: 25px;
+    }
+    .projectBox {
+        flex: 1;
+        margin: 0 10px;
+    }
+
+    .projectBox:first-of-type {
+        margin-left: 0
+    }
+
+    .projectBox:last-of-type {
+        margin-right: 0;
+    }
+
+    .contactBox {
+        flex-direction: row;
+        padding: 0
+    }
+
+    .contactBox__label {
+        padding: 12px 2px;
+        font-size: 12px;
+        width: 90px;
+        align-self: center;
+        text-align: right;
+    }
+
+    .contactBox__formRow {
+        display: flex;
+    }
+
+    .contactBox__formRow:last-child .contactBox__input {
+        margin-bottom: 0;
+        height: 212px;
+        box-sizing: border-box;
+    }
+
+    .contactBox__formRow:last-child .contactBox__label {
+        align-self: flex-start;
+    }
+ 
+    .contactBox__input {
+        width: 322px;
+        margin: 6px 7px;
+    } 
+
+    .contactBox__submit {
+        align-self: flex-end;
+        padding-top: 5px;
+        height: 19px;
+        width: 50px;
+        font-size: 14px;
+    }
+
+    .footer {
+        height: 56px;
+        padding-left: calc((100vw - 1200px)/2);
+        justify-content: flex-start;
+    }
+
+}
