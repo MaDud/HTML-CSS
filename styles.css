@@ -3,23 +3,21 @@
 :root {
     --mainColor: rgb(255, 113, 1);
     --extraColor: rgb(0, 142, 254);
-    --titleSize: 36px
+    --titleSize: 36px;
+    --desktopWidth: 1200px;
+    --searchBtnWidth: 45px
 }
 
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    /* hyphens: auto; */
 }
 
 .header {
     background-color: var(--mainColor);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    border-bottom: 1px dashed #fff;
     padding: 6px;
     position: relative;
-    border-bottom: 1px dashed #fff;
 }
 
 .logo {
@@ -27,22 +25,30 @@ body {
     margin: 15px 0;
 }
 
+.logo__img {
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+}
+
 .search {
     margin: 3px;
     height: 35px;
-    display: flex;
     border: dashed 1px #fff;
 }
 
 .search__input {
-    flex: 1;
+    height: 100%;
+    width: calc(100% - var(--searchBtnWidth));
     border: none;
     box-sizing: border-box;
-    padding-left: 10px;
+    padding: 0 10px;
 }
 
 .search__button, .navigation__button {
-    min-width: 45px;
+    width: var(--searchBtnWidth);
+    height: 100%;
+    float: right;
     background-color: var(--mainColor);
     border: none;
 }
@@ -192,7 +198,8 @@ q::before, q::after {
 .contactBox__formRow:last-child .contactBox__input {
     height: 212px;
     box-sizing: border-box;
-    padding: 10px
+    padding: 10px;
+    resize: vertical
 }
 
 .contactBox__submit {
@@ -218,22 +225,39 @@ q::before, q::after {
 
 @media (min-width: 1400px) {
 
+    .container {
+        margin: 40px auto;
+        width: var(--desktopWidth);
+    }
+
     .header {
-        padding: 22px calc((100vw - 1200px)/2) 59px calc((100vw - 1250px)/2);
-        flex-direction: row;
-        align-items: center;
+        padding: 0;
+    }
+
+    .header .container {
+        position: relative;
+        margin-top: 0px;
+        margin-bottom: 0;
+        padding-top: 40px;
     }
 
     .logo {
-        margin: 0;
+        margin-top: 0;
+        margin-bottom: 0;
         height: 145px;
-        width: auto;
+        width: max-content;
+    }
+
+    .logo__img {
+        float: left;
     }
 
     .search {
         margin: 0;
         width: 205px;
-        justify-items: flex-end;
+        position: absolute;
+        right: 0;
+        top: 95px
     }
 
     .search__input {
@@ -241,9 +265,8 @@ q::before, q::after {
     }
 
     .navigation {
-        top: auto;
-        bottom: 0;
-        left: calc((100vw - 1250px)/2);
+        position: static;
+        margin-top: 20px
     }
 
     .navigation__list {
@@ -265,7 +288,6 @@ q::before, q::after {
         text-decoration: none;
         color: var(--mainColor);
         text-transform: uppercase;
-        /* font-size: 12px; */
     }
 
     .navigation__button {

@@ -9,27 +9,31 @@
 </head>
 <body>
     <header class="header">
-        <img src="assets/logo.png" alt="Warsztaty HTML&CSS logo" class="logo"/>
-        <form class="search">
-            <input placeholder="Wyszukaj" class="search__input"/>
-            <button class="search__button">
-                <img src="assets/ico_search.png" />
-            </button>
-        </form>
-        <nav class="navigation">
-            <ul class="navigation__list">
-                <li class="navigation__item">
-                    <a href="#project" class="navigation__link">O projekcie</a>
-                </li>
-                <li class="navigation__item">
-                    <a href="#portfolio" class="navigation__link">portfolio</a>
-                </li>
-                <li class="navigation__item">
-                    <a href="#contact" class="navigation__link">kontakt</a>
-                </li>
-            </ul>
-            <button class="navigation__button">&#9776;</button>
-        </nav>
+        <div class="container">
+            <div class="logo">
+                <img src="assets/logo.png" alt="Warsztaty HTML&CSS logo" class="logo__img"/>
+            </div>
+            <form class="search">
+                <input placeholder="Wyszukaj" class="search__input"/>
+                <button class="search__button">
+                    <img src="assets/ico_search.png" />
+                </button>
+            </form>
+            <nav class="navigation">
+                <ul class="navigation__list">
+                    <li class="navigation__item">
+                        <a href="#project" class="navigation__link">O projekcie</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="#portfolio" class="navigation__link">portfolio</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="#contact" class="navigation__link">kontakt</a>
+                    </li>
+                </ul>
+                <button class="navigation__button">&#9776;</button>
+            </nav>
+        </div>
     </header>
     <section class="section" id="project">
         <section class="section__aboutBox">
@@ -119,7 +123,7 @@
                     <label class="contactBox__label" for="message">
                         Wiadomość:
                     </label>
-                    <textarea class="contactBox__input" row="10" placeholder="Tutaj wpisz swoją wiadomość" id="message"></textarea>
+                    <textarea class="contactBox__input" rows="10" placeholder="Tutaj wpisz swoją wiadomość" id="message"></textarea>
                 </div>
             </div>
             <button type="submit" class="contactBox__submit">Wyślij</button>
