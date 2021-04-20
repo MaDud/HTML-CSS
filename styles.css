@@ -84,7 +84,6 @@ body {
     z-index: 2;
 }
 
-/* wystylizować */
 .navigation__hamburger {
     position: absolute;
     top: 10px;
@@ -366,12 +365,6 @@ q::before, q::after {
         margin-right: 5px;
         border-radius: 5px 5px 0 0;
     }
-
-    /* .navigation__link {
-        text-decoration: none;
-        color: var(--mainColor);
-        text-transform: uppercase;
-    } */
 
     .navigation__button {
         display: none;
