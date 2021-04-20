@@ -367,11 +367,11 @@ q::before, q::after {
         border-radius: 5px 5px 0 0;
     }
 
-    .navigation__link {
+    /* .navigation__link {
         text-decoration: none;
         color: var(--mainColor);
         text-transform: uppercase;
-    }
+    } */
 
     .navigation__button {
         display: none;
