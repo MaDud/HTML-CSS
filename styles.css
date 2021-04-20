@@ -52,7 +52,7 @@ body {
     color: transparent
 }
 
-.search__button, .navigation__button {
+.search__button {
     width: var(--searchBtnWidth);
     height: 100%;
     float: right;
@@ -63,6 +63,8 @@ body {
 .navigation__button {
     font-size: 20px;
     color: #fff;
+    background-color: var(--mainColor);
+    padding: 5px 10px
 }
 
 .navigation {
@@ -78,7 +80,7 @@ body {
     right: 10px;
     opacity: 0;
     width: var(--searchBtnWidth);
-    height: var(--searchBtnWidth);
+    height: 25px;
     z-index: 2;
 }
 
@@ -88,7 +90,7 @@ body {
     top: 10px;
     right: 10px;
     width: var(--searchBtnWidth);
-    height: var(--searchBtnWidth);
+    height: 25px;
     z-index: 1;
     color: #fff;
     display: flex;
@@ -105,7 +107,6 @@ body {
     visibility: visible;
 }
 
-/* wystylizować menu */
 .navigation__menu {
     position: fixed;
     top: 0;
@@ -114,7 +115,6 @@ body {
     height: 100vh;
     visibility: hidden;
     background-color: #fff;
-    overflow: hidden;
 }
 
 .navigation__list {
