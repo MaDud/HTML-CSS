@@ -347,11 +347,16 @@ q::before, q::after {
         margin-top: 20px
     }
 
+    .navigation__menu {
+        visibility: visible;
+        background-color: transparent;
+        position: static;
+        height: max-content;
+    }
+
     .navigation__list {
-        display: flex;
-        list-style-type: none;
-        margin: 0;
-        padding: 0
+        flex-direction: row;
+        justify-content: flex-start;
     }
 
     .navigation__item {
